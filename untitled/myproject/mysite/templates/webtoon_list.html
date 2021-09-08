@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get</title>
+</head>
+<body>
+    <ul>
+        <li>제목 | 작가 | 평점</li>
+        {% for webtoon in webtoonList %}
+        {{webtoon.id}}  | <a href="/specific/{{webtoon.title}}" onclick = "bestandstar({{webtoon.title}})" >{{ webtoon.title}}</a> | {{webtoon.author}} | {{webtoon.rate}}
+        <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
